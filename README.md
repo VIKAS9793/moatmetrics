@@ -197,18 +197,14 @@ curl http://localhost:8000/health
 
 | **Document** | **Description** |
 |---|---|
-| [🏗️ Architecture Guide](docs/ARCHITECTURE.md) | System design and technical architecture |
-| [🚀 Quick Start Guide](docs/QUICKSTART.md) | Step-by-step setup instructions |
-| [👤 User Guide](docs/USER_GUIDE.md) | End-user documentation and workflows |
-| [📖 API Reference](docs/API.md) | Complete API documentation with examples |
-| [🚢 Deployment Guide](docs/DEPLOYMENT.md) | Production deployment best practices |
-| [🔧 Troubleshooting Guide](docs/TROUBLESHOOTING.md) | Common issues and solutions |
-| [📬 Technical Specifications](docs/TECHNICAL_SPEC.md) | Detailed technical documentation |
-| [📊 Analytics Specifications](docs/ANALYTICS_SPEC.md) | Statistical methods and AI roadmap |
-| [🗺️ Project Roadmap](docs/ROADMAP.md) | Strategic development plan |
-| [📈 Project Status](docs/PROJECT_STATUS.md) | Current development status |
-| [🛠️ Bug Fixes & Challenges](docs/CHALLENGES_AND_FIXES.md) | Development challenges and solutions |
-| [📋 Product Requirements](docs/PRD.md) | Product requirements and roadmap |
+| [🏗️ Architecture Guide](moatmetrics/docs/ARCHITECTURE.md) | System design and technical architecture |
+| [📜 PRD](moatmetrics/docs/PRD.md) | Product requirements and specifications |
+| [🔧 Technical Spec](moatmetrics/docs/TECHNICAL_SPEC.md) | Detailed technical specifications |
+| [📘 User Guide](moatmetrics/docs/USER_GUIDE.md) | End-user documentation |
+| [🔐 Security Framework](moatmetrics/docs/SECURITY_FRAMEWORK.md) | Security policies and controls |
+| [📊 Analytics Spec](moatmetrics/docs/ANALYTICS_SPEC.md) | Analytics methodology and metrics |
+| [📈 Project Status](moatmetrics/docs/PROJECT_STATUS.md) | Current development status and roadmap |
+| [🚀 Quick Start](moatmetrics/QUICKSTART.md) | Getting started guide |
 
 ---
 
@@ -252,13 +248,7 @@ curl http://localhost:8000/health
 
 ## 🤝 **Contributing**
 
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+We welcome contributions! Please see our [Contribution Guidelines](moatmetrics/CONTRIBUTING.md) and [Code of Conduct](moatmetrics/CODE_OF_CONDUCT.md) for details on how to contribute to this project. Also, check out our [Changelog](moatmetrics/CHANGELOG.md) to see what's new and what's coming next.
 
 ---
 
