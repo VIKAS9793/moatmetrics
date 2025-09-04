@@ -1,0 +1,90 @@
+{
+  "version": "1.0.0",
+  "description": "Default governance policy for MoatMetrics",
+  "created_at": "2025-01-04",
+  "roles": {
+    "admin": {
+      "description": "Full system access",
+      "permissions": [
+        "data:read",
+        "data:write",
+        "data:delete",
+        "analytics:run",
+        "analytics:configure",
+        "reports:generate",
+        "reports:export",
+        "audit:read",
+        "audit:export",
+        "governance:modify",
+        "users:manage"
+      ]
+    },
+    "analyst": {
+      "description": "Analytics and reporting access",
+      "permissions": [
+        "data:read",
+        "analytics:run",
+        "reports:generate",
+        "reports:export",
+        "audit:read"
+      ]
+    },
+    "viewer": {
+      "description": "Read-only access",
+      "permissions": [
+        "data:read",
+        "reports:read",
+        "audit:read"
+      ]
+    }
+  },
+  "data_governance": {
+    "retention_days": 365,
+    "pii_handling": "pseudonymize",
+    "allowed_file_types": ["csv", "xlsx", "json"],
+    "max_file_size_mb": 100,
+    "require_schema_validation": true
+  },
+  "analytics_governance": {
+    "require_explanation": true,
+    "min_confidence_for_auto_action": 0.9,
+    "require_human_review_below": 0.5,
+    "max_processing_time_seconds": 300,
+    "allowed_algorithms": [
+      "linear_regression",
+      "random_forest",
+      "xgboost",
+      "statistical_analysis"
+    ]
+  },
+  "audit_policy": {
+    "log_all_actions": true,
+    "log_data_access": true,
+    "log_failed_attempts": true,
+    "immutable_logs": true,
+    "retention_days": 730
+  },
+  "approval_workflows": {
+    "data_deletion": {
+      "requires_approval": true,
+      "approver_roles": ["admin"],
+      "approval_timeout_hours": 48
+    },
+    "policy_modification": {
+      "requires_approval": true,
+      "approver_roles": ["admin"],
+      "approval_timeout_hours": 24
+    },
+    "low_confidence_insights": {
+      "requires_approval": true,
+      "approver_roles": ["admin", "analyst"],
+      "approval_timeout_hours": 12
+    }
+  },
+  "compliance": {
+    "frameworks": ["GDPR", "HIPAA", "SOC2"],
+    "data_residency": "on-premise",
+    "encryption_at_rest": true,
+    "encryption_in_transit": false
+  }
+}

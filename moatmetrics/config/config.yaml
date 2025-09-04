@@ -1,0 +1,74 @@
+# MoatMetrics Configuration File
+# This file contains all configuration settings for the MoatMetrics prototype
+
+app:
+  name: "MoatMetrics"
+  version: "1.0.0-prototype"
+  environment: "development"
+  debug: true
+
+database:
+  url: "sqlite:///./data/moatmetrics.db"
+  echo: false
+  pool_size: 5
+  max_overflow: 10
+
+paths:
+  data_raw: "./data/raw"
+  data_processed: "./data/processed"
+  data_snapshots: "./data/snapshots"
+  reports: "./reports"
+  logs: "./logs"
+  temp: "./temp"
+
+etl:
+  batch_size: 1000
+  validation_strict: true
+  snapshot_enabled: true
+  max_file_size_mb: 100
+
+analytics:
+  confidence_threshold: 0.7
+  enable_shap: true
+  max_shap_samples: 100
+  cache_results: true
+  cache_ttl_seconds: 3600
+
+api:
+  host: "127.0.0.1"
+  port: 8000
+  cors_origins:
+    - "http://localhost:3000"
+    - "http://localhost:8080"
+  rate_limit: 100
+  rate_limit_window: 60
+
+governance:
+  policy_file: "./config/policies/default_policy.json"
+  audit_enabled: true
+  require_approval_threshold: 0.5
+  human_in_loop_enabled: true
+
+reporting:
+  default_format: "pdf"
+  include_audit_trail: true
+  include_explanations: true
+  max_records_per_report: 10000
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_rotation: "1 day"
+  retention: "30 days"
+  
+agent:
+  schedule_enabled: false
+  schedule_cron: "0 2 * * *"  # Daily at 2 AM
+  max_retries: 3
+  retry_delay_seconds: 60
+  
+security:
+  jwt_secret_key: "your-secret-key-change-in-production"
+  jwt_algorithm: "HS256"
+  jwt_expiration_hours: 24
+  bcrypt_rounds: 12
