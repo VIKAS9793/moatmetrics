@@ -197,14 +197,14 @@ curl http://localhost:8000/health
 
 | **Document** | **Description** |
 |---|---|
-| [🏗️ Architecture Guide](moatmetrics/docs/ARCHITECTURE.md) | System design and technical architecture |
-| [📜 PRD](moatmetrics/docs/PRD.md) | Product requirements and specifications |
-| [🔧 Technical Spec](moatmetrics/docs/TECHNICAL_SPEC.md) | Detailed technical specifications |
-| [📘 User Guide](moatmetrics/docs/USER_GUIDE.md) | End-user documentation |
-| [🔐 Security Framework](moatmetrics/docs/SECURITY_FRAMEWORK.md) | Security policies and controls |
-| [📊 Analytics Spec](moatmetrics/docs/ANALYTICS_SPEC.md) | Analytics methodology and metrics |
-| [📈 Project Status](moatmetrics/docs/PROJECT_STATUS.md) | Current development status and roadmap |
-| [🚀 Quick Start](moatmetrics/QUICKSTART.md) | Getting started guide |
+| [🏗️ Architecture Guide](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/ARCHITECTURE.md) | System design and technical architecture |
+| [📜 PRD](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/PRD.md) | Product requirements and specifications |
+| [🔧 Technical Spec](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/TECHNICAL_SPEC.md) | Detailed technical specifications |
+| [📘 User Guide](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/USER_GUIDE.md) | End-user documentation |
+| [🔐 Security Framework](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/SECURITY_FRAMEWORK.md) | Security policies and controls |
+| [📊 Analytics Spec](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/ANALYTICS_SPEC.md) | Analytics methodology and metrics |
+| [📈 Project Status](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/PROJECT_STATUS.md) | Current development status and roadmap |
+| [🚀 Quick Start](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/QUICKSTART.md) | Getting started guide |
 
 ---
 
@@ -248,13 +248,13 @@ curl http://localhost:8000/health
 
 ## 🤝 **Contributing**
 
-We welcome contributions! Please see our [Contribution Guidelines](moatmetrics/CONTRIBUTING.md) and [Code of Conduct](moatmetrics/CODE_OF_CONDUCT.md) for details on how to contribute to this project. Also, check out our [Changelog](moatmetrics/CHANGELOG.md) to see what's new and what's coming next.
+We welcome contributions! Please see our [Contribution Guidelines](https://github.com/VIKAS9793/moatmetrics/blob/main/CONTRIBUTING.md) and [Code of Conduct](https://github.com/VIKAS9793/moatmetrics/blob/main/CODE_OF_CONDUCT.md) for details on how to contribute to this project. Also, check out our [Changelog](https://github.com/VIKAS9793/moatmetrics/blob/main/CHANGELOG.md) to see what's new and what's coming next.
 
 ---
 
 ## 📄 **License**
 
-MIT License - see [LICENSE](LICENSE) file for details.
+MIT License - see [LICENSE](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/LICENSE) file for details.
 
 ---
 
