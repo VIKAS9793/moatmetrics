@@ -19,6 +19,7 @@
 - [🎯 Overview](#-overview)
 - [🏗️ System Architecture](#️-system-architecture)
 - [⚡ Quick Start](#-quick-start)
+- [📸 Screenshots & Visual Overview](#-screenshots--visual-overview)
 - [📊 Core Features](#-core-features)
 - [📈 Analytics Capabilities](#-analytics-capabilities)
 - [🛡️ Security & Compliance](#️-security--compliance)
@@ -122,10 +123,10 @@ moatmetrics_env\Scripts\activate
 source moatmetrics_env/bin/activate
 
 # 4. Install dependencies
-pip install -r requirements.txt
+pip install -r moatmetrics/requirements.txt
 
 # 5. Start the application
-python main.py
+python moatmetrics/main.py
 ```
 
 ### **Verify Installation**
@@ -142,6 +143,45 @@ curl http://localhost:8000/health
 - **🌐 Web Interface**: http://localhost:8000/docs
 - **📚 API Documentation**: http://localhost:8000/redoc
 - **❤️ Health Check**: http://localhost:8000/health
+
+---
+
+## 📸 **Screenshots & Visual Overview**
+
+### **🔐 Authentication & Access Control**
+![Login Panel](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/image/assets/Login%20panel.png)
+*Secure login with role-based access control*
+
+### **📊 Main Dashboard**
+![Main Dashboard](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/image/assets/Main%20UI%20Dashboard.png)
+*Comprehensive analytics dashboard with key metrics*
+
+![Dashboard Alternative View](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/image/assets/Main%20UI%20Dashboard%202.png)
+*Alternative dashboard layout with detailed insights*
+
+### **👨‍💼 Administration Panel**
+![Admin Panel](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/image/assets/Admin%20Panel.png)
+*Administrative controls for user and system management*
+
+### **📤 Data Upload Interface**
+![Data Upload UI](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/image/assets/Data%20Upload%20UI.png)
+*Intuitive data upload with validation and preview*
+
+![Data Upload UI 2](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/image/assets/Data%20Upload%20UI%202.png)
+*Advanced upload features with error handling*
+
+![Data Upload UI 3](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/image/assets/Data%20Upload%20UI%203.png)
+*Bulk data processing with progress tracking*
+
+### **🔧 API Documentation**
+![Swagger UI](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/image/assets/Swagger%20UI%201.png)
+*Interactive API documentation with FastAPI*
+
+![Swagger UI 2](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/image/assets/Swagger%20UI%202.png)
+*Detailed endpoint documentation and testing*
+
+![Swagger UI 3](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/image/assets/Swagger%20UI%203.png)
+*Complete API reference with request/response examples*
 
 ---
 
@@ -194,8 +234,7 @@ curl http://localhost:8000/health
 ---
 
 ## 📚 **Documentation**
-
-| **Document** | **Description** |
+|| **Document** | **Description** |
 |---|---|
 | [🏗️ Architecture Guide](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/ARCHITECTURE.md) | System design and technical architecture |
 | [📜 PRD](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/PRD.md) | Product requirements and specifications |
@@ -204,7 +243,19 @@ curl http://localhost:8000/health
 | [🔐 Security Framework](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/SECURITY_FRAMEWORK.md) | Security policies and controls |
 | [📊 Analytics Spec](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/ANALYTICS_SPEC.md) | Analytics methodology and metrics |
 | [📈 Project Status](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/PROJECT_STATUS.md) | Current development status and roadmap |
-| [🚀 Quick Start](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/QUICKSTART.md) | Getting started guide |
+| [🚀 Quick Start](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/QUICKSTART.md) | Complete 5-minute setup guide |
+| [👨‍💻 MVP Quick Start](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/QUICKSTART.md) | Technical MVP setup guide |
+| [👨‍💼 Admin Guide](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/ADMIN_GUIDE.md) | Administrator documentation |
+| [🏢 MSP Guide](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/MSP_GUIDE.md) | MSP-specific usage guide |
+| [📋 API Documentation](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/API.md) | API reference and examples |
+| [🚀 Deployment Guide](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/DEPLOYMENT.md) | Production deployment instructions |
+| [🔧 Troubleshooting](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/TROUBLESHOOTING.md) | Common issues and solutions |
+| [📊 Business Case](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/BUSINESS_CASE.md) | Business justification and ROI analysis |
+| [🗺️ Roadmap](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/ROADMAP.md) | Future development plans |
+| [🔗 Integration Guide](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/INTEGRATION_GUIDE.md) | Third-party integration instructions |
+| [📚 Getting Started](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/GETTING_STARTED.md) | Detailed setup guide |
+| [🔧 Challenges & Fixes](https://github.com/VIKAS9793/moatmetrics/blob/main/moatmetrics/docs/CHALLENGES_AND_FIXES.md) | Known issues and resolutions |
+| [📸 Screenshots Gallery](https://github.com/VIKAS9793/moatmetrics/tree/main/moatmetrics/image/assets) | UI screenshots and visual assets |
 
 ---
 
