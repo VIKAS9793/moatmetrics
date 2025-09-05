@@ -17,7 +17,7 @@ MoatMetrics is built on a modern microservices architecture:
 
 Access the interactive API documentation at `http://your-server:8000/docs`
 
-![Swagger UI](./image/assets/Swagger%20UI%201.png)
+![Swagger UI](../image/assets/Swagger%20UI%201.png)
 
 ## User Management
 

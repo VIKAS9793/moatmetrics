@@ -10,7 +10,7 @@ MoatMetrics is designed to help you monitor and manage your MSP business efficie
    - Open your web browser and navigate to your MoatMetrics instance (provided by your administrator)
    - You'll see the login screen:
    
-   ![Login Screen](image/assets/Login%20panel.png)
+   ![Login Screen](../image/assets/Login%20panel.png)
 
 2. **Enter Your Credentials**
    - Username: Your email address
