@@ -68,8 +68,8 @@ streamlit run demo_ui.py
 
 ### For Non-Technical Users
 - [Getting Started Guide](GETTING_STARTED.md)
-- [Dashboard Walkthrough](DASHBOARD_GUIDE.md)
-- [Generating Reports](REPORTS_GUIDE.md)
+- [User Guide](USER_GUIDE.md) - Complete user documentation
+- [Admin Guide](ADMIN_GUIDE.md) - Administrator features
 
 ## Support
 For support, please contact:

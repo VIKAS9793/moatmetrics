@@ -8,7 +8,7 @@
 **Last Updated**: September 4, 2025  
 **Review Cycle**: Monthly  
 **Stakeholders**: PM, Engineering, Data Science  
-**Related Documents**: [ARCHITECTURE.md](../../ARCHITECTURE.md), [API.md](../../API.md)  
+**Related Documents**: [ARCHITECTURE.md](ARCHITECTURE.md), [API.md](API.md)
 **Approval Status**: Approved
 
 ---
