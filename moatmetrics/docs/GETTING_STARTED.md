@@ -67,6 +67,8 @@ After logging in, you'll see the main dashboard:
 
 ## Next Steps
 
-- [Dashboard Walkthrough](DASHBOARD_GUIDE.md)
-- [Generating Reports](REPORTS_GUIDE.md)
-- [Advanced Features](ADVANCED_FEATURES.md)
+- [Admin Guide](ADMIN_GUIDE.md) - Administrator controls and system management
+- [User Guide](USER_GUIDE.md) - Complete user documentation and features
+- [API Documentation](API.md) - REST API reference and examples
+- [MSP Guide](MSP_GUIDE.md) - MSP-specific usage and best practices
+- [Troubleshooting](TROUBLESHOOTING.md) - Common issues and solutions
