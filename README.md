@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![MoatMetrics Logo](https://via.placeholder.com/200x80/2D3748/FFFFFF?text=MoatMetrics)
+![MoatMetrics banner](moatmetrics/image/assets/MoatMetrics banner.png)
 
 **Privacy-First Analytics Platform for MSPs**
 
