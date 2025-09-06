@@ -66,13 +66,21 @@ Configuration:
 • API Host: {config.api.host}
 • API Port: {config.api.port}
 
-Features Enabled:
+Core Features:
 ✓ Offline Analytics Engine
-✓ SHAP Explainability
+✓ SHAP Explainability Framework
 ✓ Data Governance & Compliance
 ✓ Human-in-the-Loop for Low Confidence
 ✓ Audit Trail & Reporting
 ✓ Role-Based Access Control
+
+AI Innovation Features:
+🤖 Natural Language Analytics
+🧠 Enhanced ML Optimization
+🔒 Advanced Security Framework
+🔄 Intelligent Memory Management
+📊 Batch Query Processing
+⚡ Hardware-Aware Model Selection
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     """)

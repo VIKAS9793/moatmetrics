@@ -45,7 +45,7 @@ config = get_config()
 app = FastAPI(
     title=config.app.name,
     version=config.app.version,
-    description="Privacy-first, offline, explainable analytics platform for MSPs",
+    description="Privacy-first, offline, explainable analytics platform for MSPs with AI capabilities",
     debug=config.app.debug
 )
 
@@ -71,11 +71,44 @@ def get_current_user() -> Dict[str, str]:
 # Health check endpoint
 @app.get("/health")
 async def health_check():
-    """Health check endpoint."""
+    """Health check endpoint with AI status."""
+    # Check AI system health
+    ai_status = "not_initialized"
+    ai_features = {
+        "natural_language_queries": False,
+        "enhanced_processing": False,
+        "batch_analytics": False
+    }
+    
+    try:
+        # Try to import and check AI components
+        from .ai_analytics import memory_manager, nl_analytics, enhanced_analytics
+        if all([memory_manager, nl_analytics, enhanced_analytics]):
+            ai_status = "operational"
+            ai_features = {
+                "natural_language_queries": True,
+                "enhanced_processing": True,
+                "batch_analytics": True
+            }
+        else:
+            ai_status = "partially_initialized"
+    except Exception as e:
+        ai_status = f"error: {str(e)[:50]}"
+    
     return {
         "status": "healthy",
         "timestamp": datetime.utcnow().isoformat(),
-        "version": config.app.version
+        "version": config.app.version,
+        "ai_analytics": ai_status,
+        "features": {
+            "core_analytics": True,
+            "data_governance": True,
+            "audit_trails": True,
+            "role_based_access": True,
+            "privacy_first": True,
+            "offline_processing": True,
+            **ai_features
+        }
     }
 
 
@@ -571,15 +604,48 @@ async def get_audit_logs(
         raise HTTPException(status_code=500, detail=str(e))
 
 
+# Include AI Analytics router
+try:
+    from .ai_analytics import router as ai_analytics_router
+    app.include_router(ai_analytics_router)
+    api_logger.info("AI Analytics endpoints registered")
+except ImportError as e:
+    api_logger.warning(f"AI Analytics endpoints not available: {e}")
+
 # Startup event
 @app.on_event("startup")
 async def startup_event():
     """Initialize application on startup."""
-    api_logger.info(f"Starting {config.app.name} v{config.app.version}")
+    api_logger.info(f"Starting {config.app.name} v{config.app.version} with AI Analytics")
     
     # Initialize database
     db_manager = get_db_manager()
     api_logger.info("Database initialized")
+    
+    # Initialize AI Analytics components
+    try:
+        from .ai_analytics import initialize_ai_components, get_memory_manager
+        api_logger.info("Initializing AI Analytics components...")
+        ai_init_success = await initialize_ai_components()
+        
+        if ai_init_success:
+            # Ensure approved model (tinyllama) is loaded
+            memory_manager = get_memory_manager()
+            if memory_manager:
+                api_logger.info("Verifying approved model is loaded and ready...")
+                approved_model_ready = await memory_manager.smart_model_load('tinyllama')
+                
+                if approved_model_ready:
+                    api_logger.success("✅ AI System ready: Approved model 'tinyllama' loaded and operational")
+                else:
+                    api_logger.warning("⚠️ AI System partially ready: Components initialized but approved model failed to load")
+            else:
+                api_logger.success("AI Analytics components initialized successfully")
+        else:
+            api_logger.warning("AI Analytics components failed to initialize - continuing without AI")
+    except Exception as e:
+        api_logger.error(f"Error initializing AI components: {e}")
+        api_logger.warning("Application will continue without AI Analytics features")
     
     # Validate policy
     from ..governance.policy_engine import PolicyValidator
@@ -596,7 +662,16 @@ async def startup_event():
 @app.on_event("shutdown")
 async def shutdown_event():
     """Cleanup on application shutdown."""
-    api_logger.info("Shutting down application")
+    api_logger.info("Shutting down application with AI Analytics cleanup")
+    
+    # Cleanup AI components
+    try:
+        from .ai_analytics import enhanced_analytics
+        if enhanced_analytics:
+            await enhanced_analytics.cleanup()
+            api_logger.info("AI Analytics cleanup completed")
+    except Exception as e:
+        api_logger.error(f"Error during AI cleanup: {e}")
     
     # Close database connections
     db_manager = get_db_manager()

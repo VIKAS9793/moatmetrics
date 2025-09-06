@@ -84,15 +84,13 @@ pip --version
 # Upgrade pip to latest version
 pip install --upgrade pip
 
-# Install all project dependencies
+# Install all project dependencies (includes dev dependencies)
 pip install -r requirements.txt
 
-# Install development dependencies (optional)
-pip install -r requirements-dev.txt
-
-# Verify installation
+# Verify installation (check a few key packages)
 pip list | grep fastapi
 pip list | grep pandas
+pip list | grep torch
 ```
 
 ### **4. Configuration Setup**

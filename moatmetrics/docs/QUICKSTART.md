@@ -179,14 +179,14 @@ curl -X POST "http://localhost:8000/api/upload/licenses?validate_schema=false" \
 ### **Step 3: Verify Data Upload**
 
 ```bash
-# Run database verification script
-python verify_db.py
+# Run database verification script (now in scripts directory)
+python scripts/verify_db.py
 
 # Expected output:
 # 📊 Database Verification
 # ========================
 #    👥 clients: 10 records
-#    📄 invoices: 2 records
+#    📄 invoices: 50 records
 #    ⏰ time_logs: 200 records
 #    🔑 licenses: 30 records
 ```

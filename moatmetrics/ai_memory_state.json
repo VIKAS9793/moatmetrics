@@ -1,0 +1,14 @@
+{
+  "loaded_models": {
+    "tinyllama": {
+      "name": "tinyllama",
+      "size_gb": 0.6,
+      "last_used": 1757093981.1544244,
+      "load_time": 10.024007081985474,
+      "usage_count": 58,
+      "priority": 1,
+      "status": "loaded"
+    }
+  },
+  "last_saved": 1757093981.1544244
+}
