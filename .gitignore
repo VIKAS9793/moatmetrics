@@ -59,3 +59,10 @@ data/raw/
 # Local development
 .DS_Store
 Thumbs.db
+
+# Virtual Environment
+moatmetrics_ai_env/
+moatmetrics_env/
+venv/
+env/
+ENV/
