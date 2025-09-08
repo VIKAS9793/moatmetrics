@@ -30,6 +30,7 @@ from ..utils.schemas import (
 )
 from ..utils.config_loader import get_config
 from ..utils.logging_config import setup_logging
+from ..utils.security_middleware import SecurityMiddleware, InputValidationMiddleware
 from ..etl.csv_processor import CSVProcessor
 from ..analytics.engine import AnalyticsEngine
 from ..governance.policy_engine import PolicyEngine, Permission
@@ -48,6 +49,11 @@ app = FastAPI(
     description="Privacy-first, offline, explainable analytics platform for MSPs with AI capabilities",
     debug=config.app.debug
 )
+
+# Add production security middleware
+if config.app.environment == "production":
+    app.add_middleware(SecurityMiddleware, enable_rate_limiting=True, rate_limit=200)
+    app.add_middleware(InputValidationMiddleware)
 
 # Configure CORS
 app.add_middleware(

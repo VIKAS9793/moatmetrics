@@ -1,5 +1,5 @@
 """
-Main entry point for MoatMetrics MVP.
+Main entry point for MoatMetrics Production v1.2.0.
 
 Run this file to start the FastAPI server and access the complete
 MoatMetrics platform via REST API.
@@ -44,7 +44,7 @@ def main():
 ║     ╚═╝     ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝ ╚═════╝╚══════╝   ║
 ║                                                                  ║
 ║          Privacy-First Offline Analytics Platform               ║
-║                    for MSPs - MVP v1.0.0                       ║
+║              Privacy-First Analytics - v1.2.0-production              ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
     """)

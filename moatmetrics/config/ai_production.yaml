@@ -1,0 +1,78 @@
+# MoatMetrics AI Production Configuration
+# Optimized for fast response times and reliable performance
+
+ai:
+  # Ollama Service Configuration
+  ollama:
+    base_url: "http://localhost:11434"
+    timeout: 30  # Reduced from 300s to 30s for faster responses
+    max_retries: 3
+    retry_delay: 1  # seconds
+    connection_pool_size: 10
+    
+  # Memory Management (Optimized)
+  memory:
+    max_memory_gb: 12
+    model_cache_size: 2  # Keep up to 2 models loaded
+    cleanup_threshold: 0.8  # Cleanup when 80% memory used
+    gc_frequency: 10  # Force garbage collection every 10 operations
+    
+  # Model Configuration (Production Optimized)
+  models:
+    primary: "tinyllama"
+    approved_models: 
+      - "tinyllama"
+    fallback_model: "tinyllama"
+    
+    # Model-specific settings
+    tinyllama:
+      memory_gb: 0.6
+      priority: 1
+      max_context: 4096
+      temperature: 0.3  # More consistent responses
+      top_p: 0.9
+      
+  # Performance Optimization
+  performance:
+    # Query processing optimization
+    query_timeout: 25  # seconds (reduced from 30)
+    batch_processing: true
+    max_concurrent_queries: 3
+    queue_max_size: 10
+    
+    # Response caching (for identical queries)
+    cache_enabled: true
+    cache_ttl: 1800  # 30 minutes
+    cache_max_size: 1000
+    
+    # Memory optimization
+    preload_primary_model: true
+    aggressive_cleanup: true
+    model_warming: true  # Keep model "warm" for faster responses
+    
+  # Quality Control
+  quality:
+    min_confidence_threshold: 0.4  # Lowered for faster processing
+    max_processing_time: 25  # seconds
+    fallback_on_timeout: true
+    enable_query_classification: true
+    
+  # Monitoring and Alerts
+  monitoring:
+    track_performance: true
+    alert_on_slow_queries: true
+    slow_query_threshold: 20  # seconds
+    log_model_switches: true
+    
+# Security for AI Operations
+ai_security:
+  input_validation: true
+  output_filtering: true
+  query_sanitization: true
+  max_query_length: 2000
+  blocked_patterns:
+    - "DROP TABLE"
+    - "DELETE FROM"
+    - "TRUNCATE"
+    - "javascript:"
+    - "<script"
