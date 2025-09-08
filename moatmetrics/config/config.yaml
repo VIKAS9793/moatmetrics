@@ -3,9 +3,9 @@
 
 app:
   name: "MoatMetrics"
-  version: "1.0.0-prototype"
-  environment: "development"
-  debug: true
+  version: "1.2.0-production"
+  environment: "production"
+  debug: false
 
 database:
   url: "sqlite:///./data/moatmetrics.db"
@@ -35,12 +35,13 @@ analytics:
   cache_ttl_seconds: 3600
 
 api:
-  host: "127.0.0.1"
+  host: "0.0.0.0"
   port: 8000
   cors_origins:
     - "http://localhost:3000"
     - "http://localhost:8080"
-  rate_limit: 100
+    - "https://yourdomain.com"
+  rate_limit: 200
   rate_limit_window: 60
 
 governance:
@@ -68,7 +69,10 @@ agent:
   retry_delay_seconds: 60
   
 security:
-  jwt_secret_key: "your-secret-key-change-in-production"
+  jwt_secret_key: "${JWT_SECRET_KEY:-moatmetrics-production-secret-key-2025}"
   jwt_algorithm: "HS256"
-  jwt_expiration_hours: 24
-  bcrypt_rounds: 12
+  jwt_expiration_hours: 8
+  bcrypt_rounds: 14
+  session_timeout_minutes: 30
+  max_login_attempts: 5
+  lockout_duration_minutes: 15

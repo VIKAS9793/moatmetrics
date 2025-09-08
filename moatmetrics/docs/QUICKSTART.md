@@ -85,7 +85,7 @@ You should see output similar to:
 ║     ██║ ╚═╝ ██║███████╗   ██║   ██║  ██║██║  ██║╚██████╗███████║ ║
 ║                                                                  ║
 ║          Privacy-First Offline Analytics Platform               ║
-║                    for MSPs - MVP v1.0.0                       ║
+║           Privacy-First Analytics - v1.2.0-production           ║
 ╚══════════════════════════════════════════════════════════════════╝
 
 📡 API Documentation: http://localhost:8000/docs
@@ -104,7 +104,7 @@ You should see output similar to:
 curl http://localhost:8000/health
 
 # Expected response:
-# {"status":"healthy","timestamp":"2025-09-04T15:55:30Z","version":"1.0.0-prototype"}
+# {"status":"healthy","timestamp":"2025-09-08T20:17:48Z","version":"1.2.0-production"}
 ```
 
 ### **Test 2: Open Web Interface**
